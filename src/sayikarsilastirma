@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        
+    int birinci_sayi, ikinci_sayi, ucuncu_sayi;
+    Scanner scanner = new Scanner(System.in);
+    
+    System.out.print("Birinci sayıyı giriniz: ");
+    birinci_sayi =scanner.nextInt();
+    System.out.print("İkinci sayıyı giriniz: ");
+    ikinci_sayi =scanner.nextInt();
+    System.out.print("Üçüncü sayıyı giriniz: ");
+    ucuncu_sayi =scanner.nextInt();
+    
+    if(birinci_sayi > ikinci_sayi && birinci_sayi > ucuncu_sayi){
+        if(ikinci_sayi > ucuncu_sayi){
+            System.out.println("birinci sayi > ikinci sayi > üçüncü sayi");
+        }
+        else{
+            System.out.println("birinci sayi > üçüncü sayi > ikinci sayi");
+        }
+    }
+    
+    if(ikinci_sayi > birinci_sayi && ikinci_sayi > ucuncu_sayi){
+        if(birinci_sayi > ucuncu_sayi){
+            System.out.println("ikinci sayi  > birinci  sayi > üçüncü sayi");
+        }
+        else{
+            System.out.println("ikinci sayi > üçüncü sayi > birinci sayi");
+        }
+    }
+      else{
+          if(birinci_sayi >ikinci_sayi){
+           System.out.println("üçüncü sayi > birinci sayi > ikinci sayi");
+          }
+          else{
+           System.out.println("üçüncü sayi > ikinci sayi > birinci sayi");
+          }
+      }
+    }
+}
+
