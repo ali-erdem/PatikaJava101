@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        
+    int sicaklik;
+    
+    Scanner scanner = new Scanner(System.in);
+    
+    System.out.print("Sıcaklık notu giriniz: ");
+    sicaklik =scanner.nextInt();
+  
+    
+    if(sicaklik < 5){
+        System.out.println("Kayak yapınız...");
+    }
+    else if(sicaklik >= 5 && sicaklik <= 15){
+        System.out.println("Sinemaya gidiniz...");
+    }
+      else if(sicaklik > 15 && sicaklik <= 25){
+        System.out.println("Pikniğe gidiniz...");
+    }
+      else if(sicaklik > 25){
+        System.out.println("Yüzmeye gidiniz...");
+    }
+    }
+}
