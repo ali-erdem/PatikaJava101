@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        int dogum_yili;
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Doğum yılınızı giriniz:");
+        dogum_yili = scanner.nextInt();
+        
+        if(dogum_yili % 12 == 0){
+            System.out.print("Siz bir maymunsunuz.");
+        }
+        else if(dogum_yili % 12 == 1){
+            System.out.print("Siz bir horozsunuz.");
+        }
+        else if(dogum_yili % 12 == 2){
+            System.out.print("Siz bir köpeksiniz.");
+        }
+        else if(dogum_yili % 12 == 3){
+            System.out.print("Siz bir domuzsunuz.");
+        }
+        else if(dogum_yili % 12 == 4){
+            System.out.print("Siz bir faresiniz.");
+        }
+        else if(dogum_yili % 12 == 5){
+            System.out.print("Siz bir öküzsünüz.");
+        }
+        else if(dogum_yili % 12 == 6){
+            System.out.print("Siz bir kaplansınız.");
+        }
+        else if(dogum_yili % 12 == 7){
+            System.out.print("Siz bir tavşansınız.");
+        }
+        else if(dogum_yili % 12 == 8){
+            System.out.print("Siz bir ejderhasınız.");
+        }
+        else if(dogum_yili % 12 == 9){
+            System.out.print("Siz bir yılansınız.");
+        }
+        else if(dogum_yili % 12 == 10){
+            System.out.print("Siz bir atsınız.");
+        }
+        else if(dogum_yili % 12 == 11){
+            System.out.print("Siz bir koyunsunuz.");
+        }
+        else{
+            System.out.print("Siz hiçbir şeysiniz.");
+        }
+    }
+}
