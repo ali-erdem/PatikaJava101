@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        
+        int mesafe, yas, yolculuk_turu;
+        double normal_tutar, yas_indirimi = 0, indirimli_tutar, toplam_tutar = 0;
+        double yolculuk_turu_indirim = 0;
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Mesafeyi giriniz (km): ");
+        mesafe = scanner.nextInt();
+        
+        if(mesafe <= 0){
+            System.out.println("Hatalı mesafe girdiniz! Mesafe pozitif bir değer olmalıdır.");
+            return;  
+        }
+        
+        System.out.print("Yaşınızı giriniz: ");
+        yas = scanner.nextInt();
+        
+        if(yas <= 0){
+            System.out.println("Hatalı yaş girdiniz! Yaş pozitif bir değer olmalıdır.");
+            return;  
+        }
+        
+        System.out.print("Yolculuk türü gidiş için 1, gidiş-dönüş için 2 giriniz: ");
+        yolculuk_turu = scanner.nextInt();
+        
+        if(yolculuk_turu != 1 && yolculuk_turu != 2){
+            System.out.println("Hatalı tür girdiniz! Lütfen 1 veya 2 giriniz.");
+            return; 
+        }
+        
+        normal_tutar = mesafe * 0.10;
+        
+        if(yas < 12){
+            yas_indirimi = normal_tutar * 0.50;  
+        }
+        else if(yas >= 12 && yas < 24){
+            yas_indirimi = normal_tutar * 0.10; 
+        }
+        else if(yas >= 24 && yas <= 65){
+            yas_indirimi = 0; 
+        }
+        else if(yas > 65){
+            yas_indirimi = normal_tutar * 0.30;  
+        }
+        
+        indirimli_tutar = normal_tutar - yas_indirimi;
+        
+        if(yolculuk_turu == 2){
+            yolculuk_turu_indirim = indirimli_tutar * 0.20; 
+            toplam_tutar = (indirimli_tutar - yolculuk_turu_indirim) * 2; 
+            System.out.println("Toplam Fiyat (gidiş-dönüş): " + toplam_tutar + " TL");
+        }
+        else if(yolculuk_turu == 1){
+            toplam_tutar = indirimli_tutar;
+            System.out.println("Fiyat (gidiş): " + toplam_tutar + " TL");
+        }
+    }
+}
