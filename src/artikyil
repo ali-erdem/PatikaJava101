@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        int yil;
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Yılı giriniz:");
+        yil = scanner.nextInt();
+        
+        if((yil % 400 == 0) || (yil % 4 == 0) && (yil % 100 != 0)){
+            System.out.println("" + " artık yıldır");
+        }
+        else{
+            System.out.println("" +yil + " artık yıl değildir!");
+        }
+        
+    }
+}
