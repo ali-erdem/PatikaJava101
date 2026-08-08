@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        int sayi_bir,sayi_iki;
+        int carpim_bir = 1, carpim_iki= 1;
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Dördün kuvvetleri için girilecek dereceyi giriniz: ");
+        sayi_bir = scanner.nextInt();
+        System.out.print("Beşin kuvvetleri için girilecek dereceyi giriniz:");
+        sayi_iki = scanner.nextInt();
+        
+        System.out.println("Dördün kuvvetleri için");
+        for(int i=1;i<=sayi_bir;i*=2){
+         carpim_bir *=  sayi_bir;
+         System.out.println("Çarpım: " +carpim_bir);
+        }
+        System.out.println("Beşin kuvvetleri için");
+        for(int i=1;i<=sayi_iki;i*=2){
+         carpim_iki *=  sayi_iki;
+         System.out.println("Çarpım: " +carpim_iki);
+        }
+    }
+}
