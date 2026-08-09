@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        int sayi;
+        int fakt = 1;
+        int fakt_iki = 1;
+        int fakt_uc = 1;
+        int sayi_iki;
+        int sonuc;
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Sayı girin:");
+        sayi = scanner.nextInt();
+        System.out.print("Sayı girin:");
+        sayi_iki = scanner.nextInt();
+        
+        
+        for(int i=1;i<=sayi;i++){
+            fakt *= i;
+        }
+        for(int i=1;i<=sayi_iki;i++){
+            fakt_iki *= i;
+        }
+                int sayi_uc = sayi - sayi_iki;
+
+          for(int i=1;i<=sayi_uc;i++){
+            fakt_uc *= i;
+        }
+        sonuc = fakt /((fakt_iki) * (fakt_uc));
+        System.out.println("Faktöriyel bir: " +fakt);
+        System.out.println("Faktöriyel iki: " +fakt_iki);
+        System.out.println("Faktöriyel üç: " +fakt_uc);
+        System.out.println("Faktöriyel sonuç: " +sonuc);
+
+    }
+}
