@@ -1,0 +1,15 @@
+import java.util.Scanner; 
+class Main { 
+    public static void main(String[] args) 
+    { int sayi,üs,sonuc = 1;
+    Scanner scanner = new Scanner(System.in); 
+    System.out.print("Üssü alınacak sayıyı giriniz: "); 
+    sayi = scanner.nextInt(); 
+    System.out.print("Üs için sayıyı giriniz: "); 
+    üs = scanner.nextInt(); 
+    for(int i=1;i<=üs;i++){ 
+        sonuc *= sayi; 
+    } 
+    System.out.println("Sonuç: " +sonuc); 
+    } 
+}
