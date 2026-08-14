@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Birinci sayı giriniz: ");
+        int birinci_sayi = scanner.nextInt();
+
+        System.out.print("İkinci sayı giriniz: ");
+        int ikinci_sayi = scanner.nextInt();
+
+        int i = 1; 
+        int ekok = 0; 
+        
+        while (i <= (birinci_sayi * ikinci_sayi)) {
+            if (i % birinci_sayi == 0 && i % ikinci_sayi == 0) {
+                ekok = i;
+                break;
+            }
+            i++;
+        }
+        
+        int ebob = (birinci_sayi * ikinci_sayi) / ekok;
+        
+        System.out.println("EKOK: " + ekok);
+        System.out.println("EBOB: " + ebob);
+        
+    }
+}
