@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int enBuyuk = 0, enKucuk = 0;
+        System.out.print("Kaç tane sayı gireceksiniz: ");
+        int sayi = scanner.nextInt();
+        
+       for(int i=1;i<=sayi;i++){
+        int sayilar;
+        System.out.print(+i+ "sayıyı giriniz:");
+        sayilar = scanner.nextInt();
+        if(i == 1){
+         enBuyuk = sayilar;
+         enKucuk = sayilar;   
+        }
+        else{
+        if(sayilar>enBuyuk){
+            enBuyuk = sayilar;
+            }
+        else if(sayilar<enKucuk){
+            enKucuk = sayilar;
+            }
+        else{
+                System.out.print("Hatalı");      
+            }
+        }
+       }
+        System.out.println("En büyük sayı:"+enBuyuk);      
+        System.out.println("En küçük sayı:"+enKucuk); 
+    }
+}
