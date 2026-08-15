@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        for(int i = 2; i < 100; i++){ 
+            int sayilar = i;
+            boolean asalMi = true; 
+            
+            for(int j = 2; j < sayilar; j++){
+                if(sayilar % j == 0){
+                    asalMi = false; 
+                    break;        
+                }
+            } 
+            if(asalMi){
+                System.out.println(sayilar);            
+            }
+        }
+    }
+}
