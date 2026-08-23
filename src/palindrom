@@ -1,0 +1,17 @@
+class Main {
+    static boolean isPalindrom(int sayi){
+        int gecici_sayi = sayi, ters_sayi = 0, son_sayi;
+        while(gecici_sayi != 0){
+            son_sayi = gecici_sayi % 10;
+            ters_sayi = (ters_sayi * 10) + son_sayi;
+            gecici_sayi /= 10; 
+        }
+        
+        return sayi == ters_sayi; 
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(isPalindrom(257));
+        System.out.println(isPalindrom(121)); 
+    }
+}
