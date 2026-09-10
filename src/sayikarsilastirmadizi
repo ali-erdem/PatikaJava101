@@ -1,0 +1,22 @@
+class Main {
+    public static void main(String[] args) {
+        int[] sayilar = {56, 34, 1, 8, 101, -2, -33};
+        int enBuyuk = sayilar[0];
+        int enKucuk = sayilar[0];
+
+        for(int i = 0; i<sayilar.length; i++){
+        System.out.println("Sayilar:" +sayilar[i]);
+           if(sayilar[i]>enBuyuk)
+           { 
+            enBuyuk = sayilar[i];
+            } 
+            else if (sayilar[i]<enKucuk){
+            enKucuk = sayilar[i];
+            }
+        }
+       System.out.println("***********");
+       System.out.println("En Büyük:" +enBuyuk);
+       System.out.println("***********");
+       System.out.println("En Küçük:" +enKucuk);
+    }
+}
